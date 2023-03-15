@@ -3,8 +3,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Endpoint from './Endpoint';
-
+import DeployNetwork from './DeployNetwork'
+import AddAddress from './AddAddress';
+import LoadSafe from './LoadSafe';
+import SelectNetwork from './Dropdown';
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -53,17 +55,25 @@ export default function BasicTabs() {
           <Tab label="Item One" {...a11yProps(0)} />
           <Tab label="Item Two" {...a11yProps(1)} />
           <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Item Four" {...a11yProps(2)} />
+
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Endpoint />
+        <AddAddress />
         </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <DeployNetwork />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+        <SelectNetwork/>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <LoadSafe/>;
+        </TabPanel>
+
+
     </Box>
+
   );
 }

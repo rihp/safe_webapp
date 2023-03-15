@@ -12,10 +12,6 @@ function App() {
       <Hero />
       <Connect />
       <BasicTabs />
-
-      <Button variant="contained" color="primary">
-        Click me!
-      </Button>
     </div>
   );
 }
