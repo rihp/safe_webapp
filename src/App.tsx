@@ -1,17 +1,18 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 import Hero from './components/Hero';
-import Endpoint from './components/Endpoint';
 import Connect from './components/Connect';
+import './App.css';
+import BasicTabs from './components/Tabs';
+
 
 function App() {
   return (
-    <div>
-
-
+    <div className="centered">
       <Hero />
       <Connect />
-      <Endpoint />
+      <BasicTabs />
+
       <Button variant="contained" color="primary">
         Click me!
       </Button>

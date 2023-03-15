@@ -1,4 +1,5 @@
 import React from "react";
+import { TextField } from "@material-ui/core";
 
 function Endpoint() {
   return (
@@ -11,6 +12,8 @@ function Endpoint() {
         number of that token that can currently be issued. APIs used in this
         section: fetchTokenData fetchTotalSupply{" "}
       </p>
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+
     </div>
   );
 }
