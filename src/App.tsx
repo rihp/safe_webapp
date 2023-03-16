@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
 import Hero from './components/Hero';
 import Connect from './components/Connect';
 import './App.css';
