@@ -3,10 +3,10 @@ import { TextField } from "@material-ui/core";
 import { Button } from "@material-ui/core"; 
 import SelectNetwork from "./Dropdown";
 
-function AddAddress() {
+function GetOwners() {
   return (
     <div>
-      <h1>Add Address</h1>
+      <h1>Get Owners from a Safe</h1>
       <p>
         A token is the most basic element of cryptocurrency systems. Selecting a
         token from the list calls the fetchTokenData API to obtain information
@@ -15,14 +15,13 @@ function AddAddress() {
         section: fetchTokenData fetchTotalSupply{" "}
       </p>
       <SelectNetwork/>
-
-      <TextField id="outlined-basic" label="Safe Address" variant="outlined" />
+      <TextField id="outlined-basic" label="Address" variant="outlined" />
 
       <Button variant="contained" color="primary">
-        Click me!
+        Get list of owners!
       </Button>
     </div>
   );
 }
 
-export default AddAddress;
+export default GetOwners;

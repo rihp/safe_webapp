@@ -1,12 +1,13 @@
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import DeployNetwork from './DeployNetwork'
-import AddAddress from './AddAddress';
-import LoadSafe from './LoadSafe';
-import SelectNetwork from './Dropdown';
+import * as React from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import DeployNetwork from "./DeployNetwork";
+import AddAddress from "./AddAddress";
+import LoadSafe from "./LoadSafe";
+import SelectNetwork from "./Dropdown";
+import GetOwners from "./GetOwners";
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -18,7 +19,6 @@ function TabPanel(props: TabPanelProps) {
 
   return (
     <div
-      
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -37,7 +37,7 @@ function TabPanel(props: TabPanelProps) {
 function a11yProps(index: number) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -49,31 +49,38 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-          <Tab label="Item Four" {...a11yProps(2)} />
-
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab label="add address" {...a11yProps(0)} />
+          <Tab label="deploy safe" {...a11yProps(1)} />
+          <Tab label="select network" {...a11yProps(2)} />
+          <Tab label="load safe" {...a11yProps(3)} />
+          <Tab label="get owners" {...a11yProps(4)} />
+          <Tab label="is owner" {...a11yProps(2)} />
+          <Tab label="Item Four" {...a11yProps(3)} />
+          <Tab label="Item Four" {...a11yProps(4)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <AddAddress />
-        </TabPanel>
+      </TabPanel>
       <TabPanel value={value} index={1}>
         <DeployNetwork />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <SelectNetwork/>
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-          <LoadSafe/>;
-        </TabPanel>
-
-
+        <SelectNetwork />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <LoadSafe />;
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <GetOwners />;
+      </TabPanel>
     </Box>
-
   );
 }

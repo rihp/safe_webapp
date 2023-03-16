@@ -17,6 +17,7 @@ function AddAddress() {
       <SelectNetwork/>
 
       <TextField id="outlined-basic" label="Safe Address" variant="outlined" />
+      <TextField id="outlined-basic" label="Test Address" variant="outlined" />
 
       <Button variant="contained" color="primary">
         Click me!
@@ -26,3 +27,4 @@ function AddAddress() {
 }
 
 export default AddAddress;
+    
