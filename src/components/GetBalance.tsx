@@ -1,12 +1,13 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
-import { Button } from "@material-ui/core"; 
+import { Button } from "@material-ui/core";
+import AssetTable from "./AssetsTable";
 import SelectNetwork from "./Dropdown";
 
-function AddAddress() {
+function GetBalance() {
   return (
     <div>
-      <h1>Add Address</h1>
+      <h1>Get Balance</h1>
       <p>
         A token is the most basic element of cryptocurrency systems. Selecting a
         token from the list calls the fetchTokenData API to obtain information
@@ -22,8 +23,9 @@ function AddAddress() {
       <Button variant="contained" color="primary">
         Click me!
       </Button>
+      <AssetTable/>
     </div>
   );
 }
 
-export default AddAddress;
+export default GetBalance;

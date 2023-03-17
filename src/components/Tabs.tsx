@@ -5,9 +5,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import DeployNetwork from "./DeployNetwork";
 import AddAddress from "./AddAddress";
+import GetBalance from "./GetBalance";
 import LoadSafe from "./LoadSafe";
 import SelectNetwork from "./Dropdown";
 import GetOwners from "./GetOwners";
+import IsOwner from "./IsOwner";
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -56,14 +59,14 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="add address" {...a11yProps(0)} />
-          <Tab label="deploy safe" {...a11yProps(1)} />
-          <Tab label="select network" {...a11yProps(2)} />
-          <Tab label="load safe" {...a11yProps(3)} />
-          <Tab label="get owners" {...a11yProps(4)} />
-          <Tab label="is owner" {...a11yProps(2)} />
-          <Tab label="Item Four" {...a11yProps(3)} />
-          <Tab label="Item Four" {...a11yProps(4)} />
+          <Tab label="Add address" {...a11yProps(0)} />
+          <Tab label="Deploy safe" {...a11yProps(1)} />
+          <Tab label="Select network" {...a11yProps(2)} />
+          <Tab label="Load safe" {...a11yProps(3)} />
+          <Tab label="Get owners" {...a11yProps(4)} />
+          <Tab label="Is owner" {...a11yProps(5)} />
+          <Tab label="GetBalance" {...a11yProps(6)} />
+          <Tab label="Item Four" {...a11yProps(7)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -79,6 +82,15 @@ export default function BasicTabs() {
         <LoadSafe />;
       </TabPanel>
       <TabPanel value={value} index={4}>
+        <GetOwners />;
+      </TabPanel>{" "}
+      <TabPanel value={value} index={5}>
+        <IsOwner />;
+      </TabPanel>{" "}
+      <TabPanel value={value} index={6}>
+      <GetBalance />
+      </TabPanel>{" "}
+      <TabPanel value={value} index={7}>
         <GetOwners />;
       </TabPanel>
     </Box>

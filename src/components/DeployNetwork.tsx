@@ -1,10 +1,7 @@
 import * as React from "react";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
+import SelectNetwork from "./Dropdown";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-
+import { NativeSelect, TextField } from "@material-ui/core";
 export default function DeployNetwork() {
   const [value, setValue] = React.useState("female");
 
@@ -14,7 +11,7 @@ export default function DeployNetwork() {
 
   return (
     <FormControl>
-      <h1>Add Address</h1>
+      <h1>Deploy to network</h1>
       <p>
         A token is the most basic element of cryptocurrency systems. Selecting a
         token from the list calls the fetchTokenData API to obtain information
@@ -22,16 +19,11 @@ export default function DeployNetwork() {
         number of that token that can currently be issued. APIs used in this
         section: fetchTokenData fetchTotalSupply{" "}
       </p>
-      <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
-      <RadioGroup
-        aria-labelledby="demo-controlled-radio-buttons-group"
-        name="controlled-radio-buttons-group"
-        value={value}
-        onChange={handleChange}
-      >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-      </RadioGroup>
+      <SelectNetwork/>
+      <TextField id="outlined-basic" label="New Owner Address" variant="outlined" />
+      <TextField id="outlined-basic" label="New Owner Address" variant="outlined" />
+      <TextField id="outlined-basic" label="New Owner Address" variant="outlined" />
+      <NativeSelect />
     </FormControl>
   );
 }
