@@ -3,11 +3,7 @@ import SelectNetwork from "./Dropdown";
 import FormControl from "@mui/material/FormControl";
 import { NativeSelect, TextField } from "@material-ui/core";
 export default function DeployNetwork() {
-  const [value, setValue] = React.useState("female");
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue((event.target as HTMLInputElement).value);
-  };
 
   return (
     <FormControl>
