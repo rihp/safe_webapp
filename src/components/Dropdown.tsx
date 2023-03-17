@@ -30,7 +30,7 @@ export default function SelectNetwork() {
           <MenuItem value={30}>Mainnet</MenuItem>
           <MenuItem value={30}>Gnosis Chain</MenuItem>
           <MenuItem value={30}>Optimism</MenuItem>
-          <MenuItem value={30}>Rinkeby</MenuItem>
+          <MenuItem value={30}>Goerli</MenuItem>
         </Select>
         <FormHelperText>With label + helper text</FormHelperText>
       </FormControl>
