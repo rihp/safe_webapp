@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
 import Web3 from 'web3';
 
 function Connect() {
   const [web3, setWeb3] = useState<Web3 | null>(null);
 
+  console.log(web3)
   const initWeb3 = async () => {
     if (typeof (window as any).ethereum !== 'undefined') {
       const provider = (window as any).ethereum;
