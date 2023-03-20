@@ -1,5 +1,4 @@
 import * as React from "react";
-import SelectNetwork from "./Dropdown";
 import FormControl from "@mui/material/FormControl";
 import { NativeSelect, TextField } from "@material-ui/core";
 export default function DeployNetwork() {
@@ -15,7 +14,6 @@ export default function DeployNetwork() {
         number of that token that can currently be issued. APIs used in this
         section: fetchTokenData fetchTotalSupply{" "}
       </p>
-      <SelectNetwork/>
       <TextField id="outlined-basic" label="New Owner Address" variant="outlined" />
       <TextField id="outlined-basic" label="New Owner Address" variant="outlined" />
       <TextField id="outlined-basic" label="New Owner Address" variant="outlined" />

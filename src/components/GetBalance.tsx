@@ -2,7 +2,6 @@ import React from "react";
 import { TextField } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import AssetTable from "./AssetsTable";
-import SelectNetwork from "./Dropdown";
 
 function GetBalance() {
   return (
@@ -15,7 +14,6 @@ function GetBalance() {
         number of that token that can currently be issued. APIs used in this
         section: fetchTokenData fetchTotalSupply{" "}
       </p>
-      <SelectNetwork/>
 
       <TextField id="outlined-basic" label="Safe Address" variant="outlined" />
       <TextField id="outlined-basic" label="Test Address" variant="outlined" />

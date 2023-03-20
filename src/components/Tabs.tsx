@@ -61,34 +61,34 @@ export default function BasicTabs() {
         >
           <Tab label="Add address" {...a11yProps(0)} />
           <Tab label="Deploy safe" {...a11yProps(1)} />
-          <Tab label="Select network" {...a11yProps(2)} />
-          <Tab label="Load safe" {...a11yProps(3)} />
-          <Tab label="Get owners" {...a11yProps(4)} />
-          <Tab label="Is owner" {...a11yProps(5)} />
-          <Tab label="GetBalance" {...a11yProps(6)} />
-          <Tab label="Item Four" {...a11yProps(7)} />
+          <Tab label="Is Owner" {...a11yProps(2)} />
+          <Tab label="Get Owners" {...a11yProps(3)} />
+          <Tab label="TBD" {...a11yProps(4)} />
+          <Tab label="TBD" {...a11yProps(5)} />
+          <Tab label="TBD" {...a11yProps(6)} />
+          <Tab label="TBD" {...a11yProps(7)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <AddAddress />
-      </TabPanel>
+      </TabPanel>{" "}
       <TabPanel value={value} index={1}>
         <DeployNetwork />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <SelectNetwork />
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <LoadSafe />;
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <GetOwners />;
       </TabPanel>{" "}
-      <TabPanel value={value} index={5}>
+      <TabPanel value={value} index={2}>
         <IsOwner />;
       </TabPanel>{" "}
+      <TabPanel value={value} index={3}>
+        <GetOwners />;
+      </TabPanel>{" "}
+      <TabPanel value={value} index={4}>
+        <LoadSafe />;
+      </TabPanel>{" "}
+      <TabPanel value={value} index={5}>
+        <SelectNetwork />
+      </TabPanel>{" "}
       <TabPanel value={value} index={6}>
-      <GetBalance />
+        <GetBalance />
       </TabPanel>{" "}
       <TabPanel value={value} index={7}>
         <GetOwners />;

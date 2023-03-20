@@ -1,7 +1,6 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
 import { Button } from "@material-ui/core"; 
-import SelectNetwork from "./Dropdown";
 
 function GetOwners() {
   return (
@@ -14,7 +13,6 @@ function GetOwners() {
         number of that token that can currently be issued. APIs used in this
         section: fetchTokenData fetchTotalSupply{" "}
       </p>
-      <SelectNetwork/>
       <TextField id="outlined-basic" label="Address" variant="outlined" />
 
       <Button variant="contained" color="primary">

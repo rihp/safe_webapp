@@ -1,7 +1,6 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
 import { Button } from "@material-ui/core"; 
-import SelectNetwork from "./Dropdown";
 function LoadSafe() {
   return (
     <div>
@@ -13,7 +12,6 @@ function LoadSafe() {
         number of that token that can currently be issued. APIs used in this
         section: fetchTokenData fetchTotalSupply{" "}
       </p>
-      <SelectNetwork/>
       <TextField id="outlined-basic" label="Safe Address" variant="outlined" />
 
       <Button variant="contained" color="primary">
