@@ -7,7 +7,7 @@ import DeployNetwork from "./DeployNetwork";
 import AddAddress from "./AddAddress";
 import GetBalance from "./GetBalance";
 import LoadSafe from "./LoadSafe";
-import SelectNetwork from "./Dropdown";
+import CreateTransaction from './CreateTransaction'
 import GetOwners from "./GetOwners";
 import IsOwner from "./IsOwner";
 
@@ -85,7 +85,7 @@ export default function BasicTabs() {
         <LoadSafe />;
       </TabPanel>{" "}
       <TabPanel value={value} index={5}>
-        <SelectNetwork />
+        <CreateTransaction />
       </TabPanel>{" "}
       <TabPanel value={value} index={6}>
         <GetBalance />
