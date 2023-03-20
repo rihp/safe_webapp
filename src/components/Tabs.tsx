@@ -64,7 +64,7 @@ export default function BasicTabs() {
           <Tab label="Is Owner" {...a11yProps(2)} />
           <Tab label="Get Owners" {...a11yProps(3)} />
           <Tab label="TBD" {...a11yProps(4)} />
-          <Tab label="TBD" {...a11yProps(5)} />
+          <Tab label="Create Transaction" {...a11yProps(5)} />
           <Tab label="TBD" {...a11yProps(6)} />
           <Tab label="TBD" {...a11yProps(7)} />
         </Tabs>
