@@ -8,7 +8,7 @@ import { HEIGHT as HEADER_HEIGHT } from "./Header";
 import Loader from "../components/Loader";
 import SidebarSection from "../components/SidebarSection";
 import UniswapLogo from "../images/uniswap-logo.svg";
-import { uniswapV3Uri, examples } from "../constants";
+import { SafeContractsUri, examples } from "../constants";
 
 const SidebarContainer = styled.nav`
   top: ${HEADER_HEIGHT};
@@ -65,10 +65,10 @@ function Sidebar() {
 
   useEffect(() => {
     const fetchManifest = async () => {
-      const manifest = await client.getManifest(uniswapV3Uri);
+      const manifest = await client.getManifest(SafeContractsUri);
       if (!manifest.ok) {
         console.error(
-          "Failed to fetch manifest from " + uniswapV3Uri +
+          "Failed to fetch manifest from " + SafeContractsUri +
           "\nError: " + manifest.error
         );
         return;

@@ -5,7 +5,7 @@ import { CopyAll } from "@mui/icons-material";
 import styled from 'styled-components';
 
 import PolywrapLogo from '../components/PolywrapLogo';
-import { uniswapV3Uri } from "../constants";
+import { SafeContractsUri } from "../constants";
 
 export const HEIGHT = "31px";
 
@@ -86,7 +86,7 @@ function Header() {
     return () => window.removeEventListener("resize", updateMedia);
   });
 
-  const uri = uniswapV3Uri;
+  const uri = SafeContractsUri;
 
   return (
     <HeaderContainer>
