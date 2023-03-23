@@ -3,7 +3,7 @@ import { usePolywrapClient } from "@polywrap/react";
 import { renderSchema } from "@polywrap/schema-compose";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
-import { uniswapV3Uri } from "../constants";
+import { SafeContractsUri } from "../constants";
 
 function Schema() {
   const client = usePolywrapClient();
@@ -13,10 +13,10 @@ function Schema() {
 
   React.useEffect(() => {
     const fetchManifest = async () => {
-      const manifest = await client.getManifest(uniswapV3Uri);
+      const manifest = await client.getManifest(SafeContractsUri);
       if (!manifest.ok) {
         console.error(
-          "Failed to fetch manifest from " + uniswapV3Uri +
+          "Failed to fetch manifest from " + SafeContractsUri +
           "\nError: " + manifest.error
         );
         return;

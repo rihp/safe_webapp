@@ -24,7 +24,7 @@ function Intro() {
     <div>
       <OpenCloseBlock title="What's the Uniswap v3 wrapper?">
         <TextBlock>
-          The Uniswap v3 wrapper lets developers integrate Uniswap in any environment that has the Polywrap library installed.
+          The Safe wrapper lets developers integrate Safe in any environment that has the Polywrap library installed.
         </TextBlock>
       </OpenCloseBlock>
         <Version>

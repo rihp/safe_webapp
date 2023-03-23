@@ -1,4 +1,4 @@
-import { uniswapV3Uri } from "./uris";
+import { SafeManagerUri, SafeContractsUri, SafeFactoryUri, uniswapV3Uri } from "./uris";
 import WETH from "./inputs/WETH.json"
 import USDC from "./inputs/USDC.json"
 import pool from "./inputs/pool.json"
@@ -118,6 +118,15 @@ export const examples: Example[] = [
       }
     }
   },
+  {
+  name: "Get Owners",
+  description: "Retrieve the list of owners of a safe.",
+  uri: SafeManagerUri,
+  method: "getOwners",
+  args: {
+    // Add any required arguments for the 'getOwners' method here.
+  }
+}
   // this will not work until we dynamically feed in the result of the call to swapCallParameters
   // {
   //   name: "Execute a Swap",
