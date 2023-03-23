@@ -7,7 +7,7 @@ import { WrapManifest } from "@polywrap/wrap-manifest-types-js";
 import { HEIGHT as HEADER_HEIGHT } from "./Header";
 import Loader from "../components/Loader";
 import SidebarSection from "../components/SidebarSection";
-import UniswapLogo from "../images/uniswap-logo.svg";
+import SafeLogo from "../images/safe-logo.svg";
 import { SafeContractsUri, examples } from "../constants";
 
 const SidebarContainer = styled.nav`
@@ -96,7 +96,7 @@ function Sidebar() {
   return (
     <SidebarContainer className="sidebar">
       <WrapLogo>
-        <img src={UniswapLogo} alt="uniswap-logo" width={100} height={100} />
+        <img src={SafeLogo} alt="uniswap-logo" width={100} height={100} />
       </WrapLogo>
       <WrapName onClick={() => navigate("/")}>
         {isLoading ?
