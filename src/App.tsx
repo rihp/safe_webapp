@@ -1,16 +1,29 @@
-import React from 'react';
-import Hero from './components/Hero';
-import Connect from './components/Connect';
-import './App.css';
-import BasicTabs from './components/Tabs';
+import React from "react";
+import { HashRouter } from "react-router-dom";
+import { DefaultBundle } from "@polywrap/client-js";
+import { PolywrapProvider } from "@polywrap/react";
 
+import Header from "./layout/Header";
+import AppContainer from "./layout/AppContainer";
+import Sidebar from "./layout/Sidebar";
+import Body from "./layout/Body";
+
+import "./styles/globals.css";
+
+const defaultConfig = DefaultBundle.getConfig();
 
 function App() {
   return (
-    <div className="centered">
-      <Hero />
-      <Connect />
-      <BasicTabs />
+    <div className="app">
+      <HashRouter>
+      <PolywrapProvider {...defaultConfig}>
+        <Header />
+        <AppContainer>
+          <Sidebar />
+          <Body />
+        </AppContainer>
+      </PolywrapProvider>
+      </HashRouter>
     </div>
   );
 }
